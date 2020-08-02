@@ -1,0 +1,149 @@
+NODE.JS:Node.js is an open-source, cross-platform, JavaScript runtime environment (Framework) that executes JavaScript code outside a web browser.
+ 
+const fs = require('fs');
+
+fs.readFile('./script.js', function(error, data) {
+  // error is null if no error occurred, but an Error object if it did
+  if (error) {
+   throw error;
+  }
+  // the file data will be passed into the callback if no error was thrown
+  console.log(data);
+});
+
+console.log('I am a Node program');
+
+$ node
+> 4 + 5
+9
+> function nodeIsGreat() {
+... console.log('Node is great!');
+... }
+undefined
+> nodeIsGreat()
+Node is great!
+undefined
+> .exit
+$ 
+
+$ node
+> .load ./script.js
+var a = 'Node is fun!';
+
+> a
+'Node is fun!'
+
+  'variables': {
+    'variables': {
+      'variables': {
+        'force_load%': 'true',
+        'current_type%': '<(_type)',
+      },
+      'force_load%': '<(force_load)',
+      'conditions': [
+        ['current_type=="static_library"', {
+          'force_load': 'false',
+        }],
+        [ 'current_type=="executable" and node_target_type=="shared_library"', {
+          'force_load': 'false',
+        }]
+      ],
+    },
+    'force_load%': '<(force_load)',
+  },
+
+NPM:Node Package Manager is the default package manager for Node.js and is written entirely in Javascript.
+
+npm init
+npm adduser
+npm whoami
+npm star express
+npm view socket.io
+npm search browserify
+npm help json
+npm faq
+npm help-search repository
+npm root
+npm bin
+npm prefix
+npm version
+npm ls
+npm completion >> ~/.bashrc
+npm get repository
+npm config list
+npm cache clean
+npm link ~/myLocalPackage
+npm bugs gaze
+npm explore request
+npm docs mongoose
+npm edit jade
+npm start
+npm rebuild
+npm test
+
+
+$ npm config list
+; cli configs
+metrics-registry = "https://registry.npmjs.org/"
+scope = ""
+user-agent = "npm/6.13.7 node/v12.15.0 linux x64"
+
+; node bin location = /usr/bin/nodejs
+; cwd = /home/sitepoint
+; HOME = /home/sitepoint
+; "npm config ls -l" to show all defaults.
+
+$ npm config get prefix
+/home/sitepoint/.node_modules_global
+$ cat .npmrc
+prefix=/home/sitepoint/.node_modules_global
+
+npm install npm@latest -g
+
+$ cd ~ && mkdir .node_modules_global
+$ npm config set prefix=$HOME/.node_modules_global
+
+$ npm config get prefix
+/usr
+
+$ npm install uglify-js --global
+/home/sitepoint/.node_modules_global/bin/uglifyjs -> /home/sitepoint/.node_modules_global/lib/node_modules/uglify-js/bin/uglifyjs
++ uglify-js@3.7.7
+added 3 packages from 38 contributors in 0.259s
+
+{
+  "name": "project",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC"
+}
+
+const _ = require("underscore");
+console.log(_.range(5));
+
+const mkdirp = require('mkdirp');
+
+const made = mkdirp.sync('/tmp/foo/bar/baz');
+console.log(`made directories, starting with ${made}`);
+
+$ npm cache clean --force
+
+find . -name "node_modules" -type d -exec rm -rf '{}' +
+
+const Concept = require('concept');
+Concept.setAPIKey('MY API KEY');
+Concept.scoreByProb('microsoft').then((data) => {
+
+const Concept = require('concept');
+Concept.setAPIKey('MY API KEY');
+Concept.scoreByMI('microsoft', 0).then((score) => {
+
+
+
+
+
